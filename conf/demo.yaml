@@ -1,0 +1,14 @@
+default: &default
+    logging:
+        log_dir: var/log/api
+        log_level: INFO
+    mysql_config:
+        host: 127.0.0.1
+        user: root
+        password: 123
+        db: databses
+
+# -- api
+api:
+    <<: *default
+    logfile: api.log
